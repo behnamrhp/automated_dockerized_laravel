@@ -1,0 +1,20 @@
+version: '3'
+services:
+  # vira_shop:
+  #   ports:
+  #     - 3000:3000
+  #   build:
+  #     context: ./
+  #     dockerfile: Dockerfile.shop
+  #   volumes:
+  #     - ./shopping-vira-app:/app:ro
+  #     - /app/node_modules
+  vira_app:
+    restart: "always"
+    ports:
+      - 9000:8000
+    build: 
+      context: .
+    volumes:
+      - ./vira-dockerized-app:/app
+      - /app/vendor
