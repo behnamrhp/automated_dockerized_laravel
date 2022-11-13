@@ -24,7 +24,7 @@ RUN chmod +x /usr/local/bin/composer
 
 ARG COMPOSER_ALLOW_SUPERUSER=1
 
-COPY ./vira-dockerized-app/ .
+COPY ./vira_dockerized_app/ .
 
 RUN composer install
 
