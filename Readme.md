@@ -12,13 +12,13 @@
 - `development`: running in development mode we use docker-compose.dev.yml and docker-compose.yml as well as Dockerfile. use following code in command line:
 
 ```bash
-docker-compose -f docker-compose.yml -f docker-compose.yml -d up
+docker-compose -f docker-compose.yml -f docker-compose.yml up -d 
 ```
 
 - `production` : 
 
 ```bash 
-docker-compose -f docker-compose.yml -f docker-compose.prod.yml -d up
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 
 
