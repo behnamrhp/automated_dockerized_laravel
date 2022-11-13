@@ -28,4 +28,9 @@ COPY ./vira-dockerized-app/ .
 
 RUN composer install
 
+ARG NODE_ENV
+RUN if [ "$NODE_ENV" = "production" ]; \
+    then rm /app/.env && mv /app/.env.prod /app/.env; \
+    fi
+
 CMD [ "composer", "start" ]
