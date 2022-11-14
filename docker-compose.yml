@@ -32,4 +32,5 @@ services:
       MYSQL_ROOT_PASSWORD: 
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
     networks:
-      - vira_network
+      - vira_network:
+        external: vira_network
