@@ -17,6 +17,6 @@ class Controller extends BaseController
         $user_mdl = new User();
         $console = new OutputConsoleOutput();
         $console->writeln('<info>hello</info>');
-        return 'vira_api_new';
+        return 'vira_api_new_newer_old_ghadim';
     }
 }
