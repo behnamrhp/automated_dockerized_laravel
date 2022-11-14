@@ -1,6 +1,7 @@
 version: '3'
 networks:
-  bridge:
+  vira_network:
+    driver: bridge
     external:
       name: vira_network
 services:
