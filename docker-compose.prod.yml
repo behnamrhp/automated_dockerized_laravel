@@ -4,6 +4,14 @@ services:
     ports:
       - 80:80
   vira_app:
+    deploy:
+      replicas: 10
+      restart_policy: 
+        condition: any
+        max_attempts: 10
+      update_config:
+        parallelism: 2
+        delay: 3s
     build: 
       args:
         - NODE_ENV=production
