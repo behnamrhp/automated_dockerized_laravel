@@ -7,15 +7,11 @@ services:
     restart: always
     depends_on:
       - vira_app
-    networks:
-      - vira_full_system_default
   vira_app:
     restart: "always"
     image: 'ibviraco/full_system'
     build: 
       context: .
-    networks:
-      - vira_full_system_default
     depends_on:
       - vira_db
   vira_db:
@@ -28,5 +24,3 @@ services:
       MYSQL_ROOT: root
       MYSQL_ROOT_PASSWORD: 
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
-    networks:
-      - vira_full_system_default
