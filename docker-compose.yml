@@ -3,7 +3,7 @@ services:
   nginx:
     image: nginx:stable-alpine
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     restart: always
     depends_on:
       - vira_app
