@@ -1,12 +1,5 @@
 version: '3'
 services:
-  nginx:
-    image: nginx:stable-alpine
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-    restart: always
-    depends_on:
-      - vira_app
   vira_app:
     restart: "always"
     image: 'ibviraco/full_system'
@@ -24,3 +17,10 @@ services:
       MYSQL_ROOT: root
       MYSQL_ROOT_PASSWORD: 
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
+  nginx:
+    image: nginx:stable-alpine
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    restart: always
+    depends_on:
+      - vira_app
