@@ -1,11 +1,8 @@
 version: '3'
 services:
-  nginx:
-    ports:
-      - 80:80
   vira_app:
     deploy:
-      replicas: 10
+      replicas: 4
       restart_policy: 
         condition: any
         max_attempts: 10
@@ -15,3 +12,6 @@ services:
     build: 
       args:
         - NODE_ENV=production
+  nginx:
+    ports:
+      - 80:80
