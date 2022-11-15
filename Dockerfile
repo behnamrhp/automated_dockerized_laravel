@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM public.ecr.aws/docker/library/php:7.4-fpm	
 
 WORKDIR /app
 
