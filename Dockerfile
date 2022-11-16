@@ -3,9 +3,6 @@ FROM php:7.4-fpm
 WORKDIR /app
 
 RUN apt-get install -y curl
-RUN apt-get install -y libicu-dev
-RUN apt-get install -y libzip-dev
-RUN apt-get install -y libonig-dev
 RUN docker-php-ext-install intl 
 RUN docker-php-ext-configure intl
 
