@@ -2,7 +2,7 @@ FROM php:7.4-fpm
 
 WORKDIR /app
 
-RUN apt-get update && \
+RUN apt-get update --fix-missing && \
     apt-get install -y
 RUN apt-get install -y curl
 RUN apt-get install -y libssl-dev zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev
