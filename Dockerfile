@@ -24,14 +24,14 @@ RUN chmod +x /usr/local/bin/composer
 
 ARG COMPOSER_ALLOW_SUPERUSER=1
 
-COPY ./vira_dockerized_app/ .
-
 RUN composer update
 RUN composer install
 
+COPY ./vira_dockerized_app/ .
+
 ARG NODE_ENV
 RUN if [ "$NODE_ENV" = "production" ]; \
-    then rm ./vira_dockerized_app/.env && mv ./vira_dockerized_app/.env.prod ./vira_dockerized_app/.env; \
+    then rm /app/.env && mv /app/vira_dockerized_app/.env.prod /app/vira_dockerized_app/.env; \
     fi
 
 CMD [ "composer", "start" ]
