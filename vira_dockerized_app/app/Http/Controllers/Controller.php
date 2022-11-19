@@ -18,6 +18,6 @@ class Controller extends BaseController
         $console = new OutputConsoleOutput();
         $console->writeln('<info>hello</info>');
         
-        return 'vira_api_new_newer_old_ghadim';
+        return 'vira_api';
     }
 }
