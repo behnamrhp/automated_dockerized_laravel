@@ -31,7 +31,7 @@ RUN composer install
 
 ARG NODE_ENV
 RUN if [ "$NODE_ENV" = "production" ]; \
-    then rm /app/.env && mv /app/.env.prod /app/.env; \
+    then rm /app/vira_dockerized_app/.env && mv /app/vira_dockerized_app/.env.prod /app/vira_dockerized_app/.env; \
     fi
 
 CMD [ "composer", "start" ]
