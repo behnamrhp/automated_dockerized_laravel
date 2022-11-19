@@ -26,6 +26,7 @@ ARG COMPOSER_ALLOW_SUPERUSER=1
 
 COPY ./vira_dockerized_app/ .
 
+RUN composer update
 RUN composer install
 
 ARG NODE_ENV
