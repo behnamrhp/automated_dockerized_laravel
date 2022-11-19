@@ -31,17 +31,18 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 
 `steps`: 
 
- 1. on ubuntu server we should install docker from below link:
- > https://docs.docker.com/engine/install/ubuntu/
+ 1. For install the docker on ubuntu server use following link:
+ > [DockerDoc](https://docs.docker.com/engine/install/ubuntu/)
 
 > note: if you want to install docker-compose use following link:
-https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04
+\
+[digitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04)
 
 2. login to your docker hub account
 ```bash 
 docker login
 ```
-3. clone the image with git
+3. clone the repo with git
 
 4. init the docker swarm with: 
 ```bash 
