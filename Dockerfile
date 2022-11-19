@@ -2,10 +2,10 @@ FROM php:8.0.2-fpm
 
 WORKDIR /app
 
-RUN apt-get update --fix-missing && \
+RUN apt-get update && \
     apt-get install -y
 RUN apt-get install -y curl
-RUN apt-get install -y libssl-dev zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev
+RUN apt-get install -y build-essential libssl-dev zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev
 RUN apt-get install -y libicu-dev
 RUN apt-get install -y libzip-dev
 RUN apt-get install -y libonig-dev
