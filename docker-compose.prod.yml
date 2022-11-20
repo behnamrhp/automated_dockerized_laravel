@@ -4,7 +4,7 @@ services:
     deploy:
       replicas: 4
       restart_policy: 
-        condition: always
+        condition: on-failure
         max_attempts: 10
       update_config:
         parallelism: 2
