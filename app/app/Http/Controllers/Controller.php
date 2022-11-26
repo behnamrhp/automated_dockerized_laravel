@@ -18,6 +18,6 @@ class Controller extends BaseController
         $console = new OutputConsoleOutput();
         $console->writeln('<info>hello</info>');
         
-        return 'vira_api_cd';
+        return 'returend api';
     }
 }

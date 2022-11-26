@@ -3,10 +3,10 @@ services:
   nginx:
     ports:
       - 9000:80
-  vira_app:
+  app:
     build: 
       args:
         - NODE_ENV=development
     volumes:
-      - ./vira_dockerized_app:/app
+      - ./dockerized_app:/app
       - /app/vendor
