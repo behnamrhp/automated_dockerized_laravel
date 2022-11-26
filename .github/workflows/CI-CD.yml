@@ -45,8 +45,8 @@ jobs:
           
       - name: Build and push
         uses: docker/build-push-action@v3
-        env: 
-          NODE_ENV: production
         with:
           push: true
           tags: ibviraco/full_system:latest
+          build-args: |
+            "NODE_ENV=production"
