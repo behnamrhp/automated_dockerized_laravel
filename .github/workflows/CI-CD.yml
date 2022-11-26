@@ -17,3 +17,6 @@ jobs:
 
       - name: Run composer install
         run: cd vira_dockerized_app && composer install -n --prefer-dist
+
+      - name: Run test
+        run: cd vira_dockerized_app && php artisan test
