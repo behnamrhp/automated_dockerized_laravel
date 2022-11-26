@@ -6,6 +6,10 @@ a basic project for your initial using of dockerized and automated laravel ^8.0 
   1. laravel 8.0
   2. mysql
   3. nginx
+  4. docker
+  5. docker-swarm
+  6. docker-compose
+  7. github actions
 
 ## Features :
   1. in this project we used nginx for load balancing and reverse proxy with basic configs
