@@ -1,0 +1,19 @@
+
+name: CI/CD
+
+on:
+  pull_request:
+    branches: [ "master" ]
+  push:
+    branches: [ "master" ]
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout commit
+        uses: actions/checkout@v3
+
+      - name: Run composer install
+        run: cd vira_dockerized_app && composer install -n --prefer-dist
