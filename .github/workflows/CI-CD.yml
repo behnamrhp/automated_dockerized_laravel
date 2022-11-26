@@ -15,6 +15,9 @@ jobs:
       - name: Checkout commit
         uses: actions/checkout@v3
 
+      - name: Run composer update
+        run: cd vira_dockerized_app && composer update
+
       - name: Run composer install
         run: cd vira_dockerized_app && composer install -n --prefer-dist
 
