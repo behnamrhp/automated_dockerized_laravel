@@ -46,6 +46,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: vira_dockerized_app/
+          context: .
           push: true
           tags: ibviraco/full_system:latest
