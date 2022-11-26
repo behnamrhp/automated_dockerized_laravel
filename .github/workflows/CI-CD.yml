@@ -19,10 +19,14 @@ jobs:
         run: cd vira_dockerized_app && composer update
 
       - name: Run composer install
-        run: cd vira_dockerized_app && composer install -n --prefer-dist
+        run: cd vira_dockerized_app && composer install
+        env:
+          APP_ENV: testing
 
       - name: Run test
         run: cd vira_dockerized_app && php artisan test
+        env: 
+          APP_KEY: base64:x06N/IsV5iJ+R6TKlr6sC6Mr4riGgl8Rg09XHHnRZQw=
   deploy:
     needs: test
     runs-on: ubuntu-latest
